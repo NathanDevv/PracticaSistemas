@@ -1,0 +1,24 @@
+.fotoMMA {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.fotoMMA img {
+  flex: 1;
+  height: 200px;
+  object-fit: contain;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .fotoMMA {
+    flex-direction: column;
+  }
+
+  .fotoMMA img {
+    width: 100%;
+  }
+}
