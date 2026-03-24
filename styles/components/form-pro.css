@@ -1,0 +1,58 @@
+.form-card {
+  backdrop-filter: blur(12px);
+}
+
+.form-pro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.form-pro input,
+.form-pro select,
+.form-pro textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-pro input::placeholder,
+.form-pro textarea::placeholder {
+  color: black;
+}
+
+.form-pro input:focus,
+.form-pro select:focus,
+.form-pro textarea:focus {
+  border-color: #3498db;
+  transform: scale(1.02);
+}
+
+.form-pro textarea {
+  min-height: 110px;
+}
+
+.form-pro button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3498db, #6dd5fa);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-pro button:hover {
+  transform: translateY(-3px);
+}
+
+.msg-ok {
+  display: none;
+  color: #00ff9c;
+  font-weight: bold;
+}
