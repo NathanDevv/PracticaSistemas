@@ -1,58 +1,72 @@
 .form-card {
   backdrop-filter: blur(12px);
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 18px;
 }
 
 .form-pro {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 15px;
+  width: 100%;
+  max-width: 680px;
+  margin: 20px auto;
+  gap: 14px;
 }
 
 .form-pro input,
 .form-pro select,
 .form-pro textarea {
-  padding: 12px;
-  border-radius: 10px;
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
   border: 1px solid #ddd;
   background: #f9f9f9;
   color: #333;
   outline: none;
-  transition: 0.3s;
+  transition: 0.25s;
+  font-size: 15px;
 }
 
 .form-pro input::placeholder,
 .form-pro textarea::placeholder {
-  color: black;
+  color: #777;
 }
 
 .form-pro input:focus,
 .form-pro select:focus,
 .form-pro textarea:focus {
   border-color: #3498db;
-  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
 .form-pro textarea {
-  min-height: 110px;
+  min-height: 120px;
+  resize: vertical;
 }
 
 .form-pro button {
-  padding: 12px;
+  padding: 14px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   background: linear-gradient(135deg, #3498db, #6dd5fa);
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.25s;
+  color: white;
+  letter-spacing: 1px;
 }
 
 .form-pro button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .msg-ok {
   display: none;
   color: #00ff9c;
   font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
 }
