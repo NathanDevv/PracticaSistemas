@@ -3,110 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/estilos.css" />
-    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="../styles/estilos.css" />
+    <title>Contacto - Nathan Torres</title>
   </head>
+
   <body>
-    <header>
-      <h1>Formulario de Contacto</h1>
+    <header class="header">
+      <h1>Nathan Torres</h1>
+      <p>Contacto</p>
     </header>
 
-    <main>
-      <section class="card form-card">
-        <h3>💻 Contacto Profesional</h3>
+    <div class="app">
+      <aside class="sidebar">
+        <h2 class="logo">Nathan Torres</h2>
 
-        <form
-          class="form-pro"
-          id="formContacto"
-          action="https://formspree.io/f/maqlwnjz"
-          method="POST"
-        >
-          <input type="text" name="nombre" placeholder="Nombre" required />
+        <img class="fotoNathan" src="img/fotoNathan.jpg" alt="Foto de Nathan" />
 
-          <input type="email" name="email" placeholder="Correo" required />
+        <nav>
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./acerca.html">About Me</a>
+          <a href="#">Skills</a>
+          <a href="#">Proyectos</a>
+          <a href="./formulario.html" class="active">Contacto</a>
+        </nav>
+      </aside>
 
-          <select name="motivo" required>
-            <option value="">Motivo</option>
-            <option value="Oportunidad laboral">Oportunidad laboral</option>
-            <option value="Proyecto freelance">Proyecto freelance</option>
-            <option value="Colaboración">Colaboración</option>
-          </select>
+      <main class="main">
+        <section class="card form-card">
+          <h3>💻 Contacto Profesional</h3>
 
-          <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+          <form
+            class="form-pro"
+            action="https://formspree.io/f/maqlwnjz"
+            method="POST"
+          >
+            <input type="text" name="nombre" placeholder="Nombre" required />
 
-          <input
-            type="hidden"
-            name="_subject"
-            value="Nuevo contacto desde tu portafolio web."
-          />
+            <input type="email" name="email" placeholder="Correo" required />
 
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
+            <select name="motivo" required>
+              <option value="">Motivo</option>
+              <option value="Oportunidad laboral">Oportunidad laboral</option>
+              <option value="Proyecto freelance">Proyecto freelance</option>
+              <option value="Colaboración">Colaboración</option>
+            </select>
 
-      <section class="card form-card">
-        <h3>🤝 Patrocinio MMA</h3>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
-        <form class="form-pro" id="formSponsor">
-          <input
-            type="text"
-            name="empresa"
-            placeholder="Empresa / Persona"
-            required
-          />
-          <input type="email" name="email" placeholder="Correo" required />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo contacto desde tu portafolio 🔥"
+            />
 
-          <select name="apoyo" required>
-            <option value="">Tipo de apoyo</option>
-            <option>Económico</option>
-            <option>Ropa deportiva</option>
-            <option>Suplementos</option>
-            <option>Publicidad</option>
-          </select>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
 
-          <textarea
-            name="mensaje"
-            placeholder="Cuéntame sobre tu propuesta"
-            required
-          ></textarea>
+        <section class="card form-card">
+          <h3>🤝 Patrocinio MMA</h3>
 
-          <button type="submit">Enviar propuesta</button>
+          <form
+            class="form-pro"
+            action="https://formspree.io/f/maqlwnjz"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="empresa"
+              placeholder="Empresa / Persona"
+              required
+            />
 
-          <p class="msg-ok" id="msg2">Propuesta enviada correctamente.</p>
-        </form>
-      </section>
-    </main>
+            <input type="email" name="email" placeholder="Correo" required />
 
-    <script>
-      function activarForm(idForm, idMsg) {
-        const form = document.getElementById(idForm);
-        const msg = document.getElementById(idMsg);
+            <select name="apoyo" required>
+              <option value="">Tipo de apoyo</option>
+              <option value="Económico">Económico</option>
+              <option value="Ropa deportiva">Ropa deportiva</option>
+              <option value="Suplementos">Suplementos</option>
+              <option value="Publicidad">Publicidad</option>
+            </select>
 
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
+            <textarea
+              name="mensaje"
+              placeholder="Cuéntame sobre tu propuesta"
+              required
+            ></textarea>
 
-          const inputs = form.querySelectorAll("input,select,textarea");
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nueva propuesta de patrocinio 🥊"
+            />
 
-          let valido = true;
+            <button type="submit">Enviar propuesta</button>
+          </form>
+        </section>
+      </main>
+    </div>
 
-          inputs.forEach((i) => {
-            if (!i.value) {
-              i.style.border = "1px solid red";
-              valido = false;
-            } else {
-              i.style.border = "1px solid #00ff9c";
-            }
-          });
-
-          if (valido) {
-            msg.style.display = "block";
-            form.reset();
-          }
-        });
-      }
-
-      activarForm("formContacto", "msg1");
-      activarForm("formSponsor", "msg2");
-    </script>
+    <footer class="footer">
+      <p>© 2026 Nathan Torres</p>
+    </footer>
   </body>
 </html>
